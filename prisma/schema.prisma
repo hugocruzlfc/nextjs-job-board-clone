@@ -2,10 +2,31 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model Job {
+  id               Int      @id @default(autoincrement())
+  slug             String   @unique
+  title            String
+  type             String
+  locationType     String
+  location         String?
+  description      String?
+  salary           Int
+  companyName      String
+  companyLogoUrl   String?
+  applicationEmail String?
+  applicationUrl   String?
+  approved         Boolean  @default(false)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@map("jobs")
 }
