@@ -26,7 +26,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-draft-wysiwyg": "^1.15.0",
-    "react-hook-form": "^7.49.3",
+    "react-hook-form": "^7.51.0",
     "react-markdown": "^9.0.1",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
