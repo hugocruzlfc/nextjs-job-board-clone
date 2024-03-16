@@ -23,7 +23,7 @@ export default function Home({
         <p className="text-muted-foreground">Find your dream job.</p>
       </div>
       <section className="flex flex-col gap-4 md:flex-row">
-        <JobFilterSidebar />
+        <JobFilterSidebar defaultValues={filterValues} />
         <JobsResults filterValues={filterValues} />
       </section>
     </main>
