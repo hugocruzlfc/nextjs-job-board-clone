@@ -5,4 +5,5 @@ export * from "./JobFilterSidebar";
 export * from "./JobsListItems";
 export * from "./JobsResults";
 export * from "./Navbar";
+export * from "./NewJobForm";
 export * from "./ui";
