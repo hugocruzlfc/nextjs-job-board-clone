@@ -1,3 +1,4 @@
+"use client";
 import React, { forwardRef, useMemo, useState } from "react";
 import { Input } from "../ui";
 import { cities as citiesList } from "@/lib";

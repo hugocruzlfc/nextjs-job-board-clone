@@ -1,6 +1,9 @@
 import { NewJobForm } from "@/components";
-import { NextPage } from "next";
-import { Metadata } from "next";
+import { NextPage, Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Post a new job",
+};
 
 const Page: NextPage = () => {
   return (
