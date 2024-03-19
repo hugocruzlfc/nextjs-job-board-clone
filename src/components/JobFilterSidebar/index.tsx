@@ -1,6 +1,6 @@
 import React from "react";
 import { filterJobs } from "@/actions";
-import { Button, Input, Label } from "../ui";
+import { Input, Label } from "../ui";
 import Select from "../ui/select";
 import prisma from "@/lib/prisma";
 import { JobFilterValues, Jobs } from "@/types";

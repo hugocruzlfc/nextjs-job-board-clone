@@ -69,7 +69,7 @@ export const createJobSchema = z
       .string()
       .min(3, "Required minimum 3 characters")
       .max(100, "Maximum 100 characters"),
-    companyLogoUrl: companyLogoSchema,
+    companyLogo: companyLogoSchema,
     description: z.string().max(1000, "Maximum 1000 characters").optional(),
     salary: z
       .string()

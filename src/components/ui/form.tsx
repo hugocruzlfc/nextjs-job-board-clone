@@ -1,4 +1,5 @@
 "use client";
+
 import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { Slot } from "@radix-ui/react-slot";
@@ -11,8 +12,8 @@ import {
   useFormContext,
 } from "react-hook-form";
 
-import { Label } from "@/components/ui/label";
 import { cn } from "@/utils";
+import { Label } from "@/components/ui/label";
 
 const Form = FormProvider;
 
@@ -91,7 +92,7 @@ const FormLabel = React.forwardRef<
 >((props, ref) => {
   const { formItemId } = useFormField();
 
-  return <Label htmlFor={formItemId} ref={ref} {...props} />;
+  return <Label ref={ref} htmlFor={formItemId} {...props} />;
 });
 FormLabel.displayName = "FormLabel";
 

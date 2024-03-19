@@ -1,9 +1,9 @@
+"use server";
+
 import { jobFilterSchema } from "@/lib";
 import { redirect } from "next/navigation";
 
 export async function filterJobs(formData: FormData) {
-  "use server";
-
   const values = Object.fromEntries(formData.entries());
 
   const { search, location, type, remote } = jobFilterSchema.parse(values);

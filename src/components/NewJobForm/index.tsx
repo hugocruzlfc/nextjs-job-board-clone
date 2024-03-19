@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import H1 from "../ui/h1";
 import { CreateJobValues, Jobs, Location } from "@/types";
@@ -15,12 +16,14 @@ import {
   Input,
   Label,
 } from "../ui";
+
 import Select from "../ui/select";
 import LocationInput from "../LocationInput";
 import { X } from "lucide-react";
 import RichTextEditor from "../RichTextEditor";
 import { draftToMarkdown } from "markdown-draft-js";
 import LoadingButton from "../LoadingButton";
+import { createJobPosting } from "@/actions";
 
 export default function NewJobForm() {
   const form = useForm<CreateJobValues>({
@@ -38,11 +41,18 @@ export default function NewJobForm() {
   } = form;
 
   async function onSubmit(values: CreateJobValues) {
+    const formData = new FormData();
+
+    Object.entries(values).forEach(([key, value]) => {
+      if (value) {
+        formData.append(key, value.toString());
+      }
+    });
+
     try {
-      console.log(isSubmitting);
-      alert(JSON.stringify(values, null, 2));
+      await createJobPosting(formData);
     } catch (error) {
-      console.error(error);
+      alert("Something went wrong, please try again.");
     }
   }
 
@@ -117,7 +127,7 @@ export default function NewJobForm() {
             />
             <FormField
               control={control}
-              name="companyLogoUrl"
+              name="companyLogo"
               render={({ field: { value, ...fieldValues } }) => (
                 <FormItem>
                   <FormLabel>Company Logo</FormLabel>
