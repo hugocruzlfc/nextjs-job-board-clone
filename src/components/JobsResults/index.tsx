@@ -4,6 +4,7 @@ import prisma from "@/lib/prisma";
 import { JobFilterValues } from "@/types";
 import { Prisma } from "@prisma/client";
 import { buildFilters } from "@/utils";
+import Link from "next/link";
 
 interface JobsResultsProps {
   filterValues: JobFilterValues;
@@ -23,7 +24,9 @@ export const JobsResults: React.FC<JobsResultsProps> = async ({
   return (
     <div className="grow space-y-4">
       {jobs.map((job) => (
-        <JobsListItem key={job.id} job={job} />
+        <Link key={job.id} href={`/jobs/${job.slug}`}>
+          <JobsListItem job={job} />
+        </Link>
       ))}
       {jobs.length === 0 && (
         <p className="m-auto text-center">

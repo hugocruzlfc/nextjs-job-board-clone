@@ -1,11 +1,13 @@
 export * from "./Badge";
 export { default as Footer } from "./Footer";
 export * from "./FormSubmitButton";
+export { default as JobDetails } from "./JobDetails";
 export * from "./JobFilterSidebar";
 export * from "./JobsListItems";
 export * from "./JobsResults";
 export { default as LoadingButton } from "./LoadingButton";
 export { default as LocationInput } from "./LocationInput";
+export { default as Markdown } from "./Markdown";
 export * from "./Navbar";
 export { default as NewJobForm } from "./NewJobForm";
 export { default as RichTextEditor } from "./RichTextEditor";
