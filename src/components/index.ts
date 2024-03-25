@@ -3,6 +3,7 @@ export { default as Footer } from "./Footer";
 export * from "./FormSubmitButton";
 export { default as JobDetails } from "./JobDetails";
 export * from "./JobFilterSidebar";
+export { default as JobListItem } from "./JobListItem";
 export * from "./JobsListItems";
 export * from "./JobsResults";
 export { default as LoadingButton } from "./LoadingButton";
