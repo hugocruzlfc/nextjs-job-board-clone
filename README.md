@@ -40,3 +40,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - `npx prisma init` - Initialize Prisma
 - `npx prisma db push` - Create the database schema
 - `npx prisma generate` - Generate Prisma Client , any time you make changes to the schema
+- `npx prisma studio` - Open Prisma Studio
