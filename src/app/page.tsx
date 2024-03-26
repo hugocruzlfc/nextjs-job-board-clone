@@ -20,7 +20,7 @@ export function generateMetadata({
 }
 
 export default function Home({
-  searchParams: { search, location, type, remote },
+  searchParams: { search, location, type, remote, page },
 }: PageProps) {
   const filterValues: JobFilterValues = {
     search,
@@ -37,7 +37,10 @@ export default function Home({
       </div>
       <section className="flex flex-col gap-4 md:flex-row">
         <JobFilterSidebar defaultValues={filterValues} />
-        <JobsResults filterValues={filterValues} />
+        <JobsResults
+          filterValues={filterValues}
+          page={page ? parseInt(page) : undefined}
+        />
       </section>
     </main>
   );

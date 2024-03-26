@@ -3,4 +3,5 @@ export interface SearchParams {
   location?: string;
   type?: string;
   remote?: string;
+  page?: string;
 }

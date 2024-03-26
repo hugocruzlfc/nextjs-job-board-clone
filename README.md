@@ -41,3 +41,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - `npx prisma db push` - Create the database schema
 - `npx prisma generate` - Generate Prisma Client , any time you make changes to the schema
 - `npx prisma studio` - Open Prisma Studio
+
+## Deploy on Vercel configuration
+
+Add the following to your `package.json` file:
+
+- `"postinstall":"prisma generate" ` - Generate Prisma Client after deployment
+
+## Youtube video
+
+- [Youtube video](https://www.youtube.com/watch?v=XD5FpbVpWzk)
