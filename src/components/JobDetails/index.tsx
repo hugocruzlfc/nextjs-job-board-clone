@@ -5,7 +5,7 @@ import Link from "next/link";
 import { formatMoney } from "@/utils";
 import Markdown from "../Markdown";
 
-interface JobPageProps {
+interface JobDetailsProps {
   job: Job;
 }
 
@@ -21,7 +21,7 @@ export default function JobDetails({
     salary,
     companyLogoUrl,
   },
-}: JobPageProps) {
+}: JobDetailsProps) {
   return (
     <section className="w-full grow space-y-5">
       <div className="flex items-center gap-3">
