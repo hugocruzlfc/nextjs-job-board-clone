@@ -19,7 +19,7 @@ export function generateMetadata({
   };
 }
 
-export default function Home({
+export default async function Home({
   searchParams: { search, location, type, remote, page },
 }: PageProps) {
   const filterValues: JobFilterValues = {
